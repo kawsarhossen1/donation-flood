@@ -64,3 +64,42 @@ document.querySelectorAll("#donate-now").forEach((button) => {
   });
 });
 
+// Handle "Show Total Donations" button click
+document
+  .getElementById("show-total-donations")
+  .addEventListener("click", () => {
+    const content = `<p class="text-green-600 text-lg font-semibold">Total Donations: ${totalDonations.toFixed(
+      2
+    )} BDT</p>`;
+    updateDisplayArea(
+      content,
+      `Total Donations: ${totalDonations.toFixed(2)} BDT`
+    );
+  });
+
+// Handle "Show Donation History" button click
+document
+  .getElementById("show-donation-history")
+  .addEventListener("click", () => {
+    if (donationHistory.length === 0) {
+      const content = `<p class="text-red-600 text-lg font-semibold">No donations have been made yet.</p>`;
+      updateDisplayArea(content, `Donation History: 0 BDT`);
+      return;
+    }
+
+    // Create a list of donation history
+    const historyList = donationHistory
+      .map(
+        (entry, index) =>
+          `<li class="text-gray-700">Total Donation: <strong>${entry.amount} BDT</strong> at ${entry.time}</li>`
+      )
+      .join("");
+
+    const content = `
+    <ul class="list-disc list-inside mt-2">${historyList}</ul>
+  `;
+    updateDisplayArea(
+      content,
+      `Donation History: ${totalDonations.toFixed(2)} BDT`
+    );
+  });
