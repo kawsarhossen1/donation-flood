@@ -43,6 +43,35 @@
       </div>
     </header>
 
+    <!-- Hero Section -->
+    <section id="summary" class="py-8 bg-white mt-20">
+      <div class="container mx-auto text-center">
+        <div class="flex justify-center gap-4">
+          <!-- Total Donation Button -->
+          <button
+            id="show-total-donations"
+            class="bg-green-500 hover:bg-green-700 text-black font-bold px-6 py-2 rounded-lg shadow-md"
+          >
+            Donations
+          </button>
+          <!-- Donation History Button -->
+          <button
+            id="show-donation-history"
+            class="bg-inherit hover:bg-green-700 text-black font-bold px-6 py-2 rounded-lg shadow-md border border-gray-500"
+          >
+            History
+          </button>
+        </div>
+        <!-- Display area for total donation or history -->
+        <div
+          id="display-area"
+          class="hidden mt-6 bg-white p-6 rounded-lg shadow-lg text-left"
+        >
+          <p class="text-gray-700">Click a button to see the details.</p>
+        </div>
+      </div>
+    </section>
+
     <script src="./script.js"></script>
   </body>
 </html>
