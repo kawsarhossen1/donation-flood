@@ -7,7 +7,41 @@
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body class="bg-white">
-    
+    <!-- Navbar -->
+    <header class="bg-gray-100 shadow-lg py-4 sticky top-0 z-50">
+      <div class="container mx-auto flex items-center justify-between px-6">
+        <div>
+          <button
+            class="bg-green-500 hover:bg-green-700 text-white font-semibold px-6 py-2 rounded-lg shadow-md"
+          >
+            Blog
+          </button>
+        </div>
+
+        <div class="flex items-center gap-4">
+          <img
+            src="./images/logo.png"
+            alt="Noakhali Flood Relief"
+            class="w-12 h-12 rounded-full shadow-md"
+          />
+          <h4 class="text-xl font-semibold text-gray-800">Donate Bangladesh</h4>
+        </div>
+        <!-- Left Section: Sticky Amount Button -->
+        <div class="flex items-center gap-4">
+          <img
+            src="./images/coin.png"
+            alt="Logo"
+            class="w-10 h-10 rounded-full shadow-md"
+          />
+          <button
+            id="amount-button"
+            class="text-lg font-bold bg-transparent text-gray-800 px-4 py-2 cursor-default"
+          >
+            500 BDT
+          </button>
+        </div>
+      </div>
+    </header>
 
     <script src="./script.js"></script>
   </body>
